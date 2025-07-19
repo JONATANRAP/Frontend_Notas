@@ -8,13 +8,13 @@ Desde el formulario del frontend, el usuario puede registrar las notas de un est
 
 ### 📸 Evidencia visual del registro desde el frontend:
 
-![Registro desde Frontend](./img/registro.jpg)
+![Registro desde Frontend](./img/registro.jpeg)
 
 ### 🛢️ Registro guardado en la base de datos (MySQL):
 
 > Tabla: `estudiante` 
 
-![Datos guardados en BD](./img/bd.JPG)
+![Datos guardados en BD](./img/bd.jpeg)
 
 ---
 
@@ -25,7 +25,7 @@ Desde el frontend, también se puede realizar la consulta de notas por cédula d
 
 ### 📸 Evidencia visual de la consulta:
 
-![Consulta desde Frontend](./evidencias/consulta.jpg)
+![Consulta desde Frontend](./evidencias/consulta.jpeg)
 
 
 
