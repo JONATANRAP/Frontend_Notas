@@ -14,7 +14,7 @@ Desde el formulario del frontend, el usuario puede registrar las notas de un est
 
 > Tabla: `estudiante` 
 
-![Datos guardados en BD](./img/bd.JPEG)
+![Datos guardados en BD](./img/bd.JPG)
 
 ---
 
