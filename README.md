@@ -1,3 +1,34 @@
+# 📘 Evidencia de Funcionamiento - API de Notas Estudiantiles
+
+
+## ✅ Registro de Notas (POST)
+
+Desde el formulario del frontend, el usuario puede registrar las notas de un estudiante, enviando una solicitud POST al endpoint:
+
+
+### 📸 Evidencia visual del registro desde el frontend:
+
+![Registro desde Frontend](./img/registro.jpg)
+
+### 🛢️ Registro guardado en la base de datos (MySQL):
+
+> Tabla: `estudiante` 
+
+![Datos guardados en BD](./img/bd.JPG)
+
+---
+
+## 🔍 Consulta de Notas (GET)
+
+Desde el frontend, también se puede realizar la consulta de notas por cédula del estudiante:
+
+
+### 📸 Evidencia visual de la consulta:
+
+![Consulta desde Frontend](./evidencias/consulta.jpg)
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
