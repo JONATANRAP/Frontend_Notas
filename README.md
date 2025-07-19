@@ -3,7 +3,7 @@
 
 ## ✅ Registro de Notas (POST)
 
-Desde el formulario del frontend, el usuario puede registrar las notas de un estudiante, enviando una solicitud POST al endpoint:
+Desde el formulario del frontend, el usuario puede registrar las notas de un estudiante:
 
 
 ### 📸 Evidencia visual del registro desde el frontend:
