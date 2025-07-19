@@ -20,10 +20,10 @@ export default function ConsultarNotas() {
     }
   }
 
-  const promedio = resultado?.notas?.length
+  const promedio = resultado?.materias?.length
     ? (
-        resultado.notas.reduce((acc: number, n: any) => acc + n.nota, 0) /
-        resultado.notas.length
+        resultado.materias.reduce((acc: number, n: any) => acc + n.nota, 0) /
+        resultado.materias.length
       ).toFixed(2)
     : null
 
@@ -56,48 +56,37 @@ export default function ConsultarNotas() {
           background: '#fafafa',
           boxShadow: '0 2px 8px #eee'
         }}>
-          <h2>{resultado.nombre}</h2>
+          <h2>{resultado.nombre} {resultado.apellido}</h2>
           <p><strong>Cédula:</strong> {resultado.cedula}</p>
           <h3>Notas</h3>
-          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-            <thead>
-              <tr>
-                <th style={{ borderBottom: '1px solid #ddd', padding: 4 }}>Materia</th>
-                <th style={{ borderBottom: '1px solid #ddd', padding: 4 }}>Nota</th>
-              </tr>
-            </thead>
-            <tbody>
-  {(resultado?.notas || []).map((n: any, i: number) => (
-    <tr key={i}>
-      <td style={{ padding: 4 }}>{n.materia}</td>
-      <td style={{ padding: 4 }}>{n.nota}</td>
-    </tr>
-  ))}
-</tbody>
-          </table>
-
-          {promedio && (
-            <p style={{ marginTop: 12 }}>
-              <strong>Promedio:</strong> {promedio}
-            </p>
-          )}
-
-          {resultado._links && (
-            <div style={{ marginTop: 12 }}>
-              {resultado._links.self && (
-                <a href={resultado._links.self.href} target="_blank" rel="noopener noreferrer" style={{ marginRight: 12 }}>
-                  Ver detalle
-                </a>
-              )}
-              {resultado._links['agregar-notas'] && (
-                <a href={resultado._links['agregar-notas'].href} target="_blank" rel="noopener noreferrer">
-                  Agregar notas
-                </a>
-              )}
-            </div>
+          {resultado.materias.length > 0 ? (
+            <>
+              <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                <thead>
+                  <tr>
+                    <th style={{ borderBottom: '1px solid #ddd', padding: 4 }}>Materia</th>
+                    <th style={{ borderBottom: '1px solid #ddd', padding: 4 }}>Nota</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {resultado.materias.map((n: any, i: number) => (
+                    <tr key={i}>
+                      <td style={{ padding: 4 }}>{n.materia}</td>
+                      <td style={{ padding: 4 }}>{n.nota}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <p style={{ marginTop: 12 }}>
+                <strong>Promedio:</strong> {promedio}
+              </p>
+            </>
+          ) : (
+            <p>No hay materias registradas.</p>
           )}
         </div>
       )}
     </div>
   )
 }
+
